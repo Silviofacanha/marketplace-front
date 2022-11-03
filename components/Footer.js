@@ -11,6 +11,8 @@ export default function Footer() {
             <Icon.Facebook className="m-2" size={36} />
             <Icon.Twitter className="m-2" size={36} />
             <Icon.Instagram className="m-2" size={36} />
+            <Icon.Whatsapp className="m-2" size={36} />
+            
           </div>
           <Row className="justify-content-center p-3">
             &copy; 2022 - ECommerce
