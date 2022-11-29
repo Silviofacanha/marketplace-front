@@ -8,18 +8,24 @@ import {
   FormGroup,
   Row,
 } from "react-bootstrap";
-import {useRouter} from "next/router";
-import { Router } from "react-bootstrap-icons";
+import { useRouter } from "next/router";
 
 export default function Login() {
   const router = useRouter();
 
-  function handleLogin(e){    
-    
-    //TODO: lógica de login para o sistema
+  function handleLogin(e) {
+    // TODO: Lógica de login para o sistema
     e.preventDefault();
+    /*
+      1. Verificar os dados inseridos
+      2. Enviar a requisição para o backend
+      3. Espera a resposta
+        3.1. Se existir erro, alertar ao usuário
+        3.2. Se a requisição estiver ok, salvar o token e vai pra proxima pagina
+    */
     router.push("/categorias");
   }
+
   return (
     <>
       <Container className="p-5">
@@ -44,11 +50,11 @@ export default function Login() {
               />
             </Form.Group>
             <Form.Group className="p-2 text-center">
-              <Button type="submit">Entrar no sistena</Button>
-              <br />              
-                  <Link href="/nova-conta">
-                    <a>Crie uma conta</a>
-                  </Link>                          
+              <Button type="submit">Entrar no sistema</Button>
+              <br />
+              <Link href="/nova-conta">
+                <a>Crie uma conta</a>
+              </Link>
             </Form.Group>
           </Form>
         </Card>
